@@ -45,3 +45,32 @@ const someFunc = function (){
     console.log("some function");
 }
 console.log(typeof someFunc);
+
+/************************************************ */
+
+// Primitive data types stored in -> stack memeory
+//non primitives in heap
+
+//stack
+let userName = "Manasa Hebbar";
+
+let newUSer = userName;// this gets copy of userName. newUser wont be pointing to userName.
+
+newUSer = "Ranjan K"; // this will not change value of userName. because newUser was having copy of userName not the original value.
+console.log(userName);
+console.log(newUSer);
+
+//heap
+let userDetails = {
+    userName: "Manasa",
+    email: "manasa@gmail.com"
+}
+
+let newUserDetails = userDetails; // bcz this its non primitive datatype this will get reference of original value. now if i change one other one will also change.
+
+userDetails.email = "manasa.s@philips.com"; //this will change both userDetails and newUserDetails
+
+console.log(newUserDetails);
+console.log(userDetails);
+
+
